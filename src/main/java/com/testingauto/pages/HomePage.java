@@ -37,6 +37,10 @@ public class HomePage extends  BasePage{
 
    }
 
+    public ProductPage openProduct(String productName) {
+        click(By.linkText(productName));
+        return new ProductPage(driver);
+    }
     public  Boolean isLogoutBtn(){
         return  isDisplayed(logoutButton);
 
